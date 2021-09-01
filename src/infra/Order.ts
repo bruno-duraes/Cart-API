@@ -34,6 +34,7 @@ export default class Order {
         const value = this.getTotal(orderCode)
         return { currentOrder, value: value }
     }
+
     removeItem(id: string, orderCode: string): OrderDTO {
         for (const order of this.orderList) {
             if (order.code === orderCode) {

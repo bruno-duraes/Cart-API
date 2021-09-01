@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules Projects/view/server.ts",
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/view/server.ts",
     "te st": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },

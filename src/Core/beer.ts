@@ -2,11 +2,10 @@ import { TaxItem } from "./taxItem"
 
 export class Beer extends TaxItem {
     constructor(
-        category: string,
-        price: number,
-        description: string
+        description: string,
+        price: number
     ) {
-        super(category, price, description)
+        super('Beer', price, description)
     }
     getTax() {
         return 0.5
