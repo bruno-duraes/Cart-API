@@ -15,7 +15,7 @@ route.get('/orders', (_: Request, res: Response) => {
     res.json(order.getOrders)
 })
 
-route.get('/orders/:code', (req: Request, res: Response) => {
+route.delete('/orders/:code', (req: Request, res: Response) => {
     const { code } = req.params
     res.json(order.removeOrder(code))
 })
@@ -45,6 +45,21 @@ route.delete('/order/:code/:id', (req: Request, res: Response) => {
     }
 })
 
-route.get()
+route.get('/order/:code', (req: Request, res: Response) => {
+    const { code } = req.params
+    res.json(order.getSubtotal(code))
+})
+
+route.get('/order/:code', (req: Request, res: Response) => {
+    const { code } = req.params
+    res.json(order.getTaxes(code))
+})
+
+route.get('/order/:code', (req: Request, res: Response) => {
+    const { code } = req.params
+    res.json(order.getTotal(code))
+})
+
+
 
 export { route }
